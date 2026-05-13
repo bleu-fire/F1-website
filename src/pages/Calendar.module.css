@@ -1,0 +1,67 @@
+.page {
+  position: relative;
+  padding: var(--space-8) 0 var(--space-10);
+  overflow: hidden;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/wp12294904.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(6px) grayscale(1) contrast(1.05) brightness(0.9);
+  transform: scale(1.05);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.header {
+  margin-bottom: var(--space-5);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--color-lime);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-3);
+}
+
+.empty {
+  padding: var(--space-10) 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

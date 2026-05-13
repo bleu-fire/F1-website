@@ -1,0 +1,33 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sprint {
+  background: var(--color-crime);
+  color: #fff;
+}
+
+.new {
+  background: var(--color-lime);
+  color: var(--color-text-inverse);
+}
+
+.continent {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.watched {
+  background: #1e3a1e;
+  color: var(--color-lime);
+}

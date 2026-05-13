@@ -1,0 +1,175 @@
+.page {
+  position: relative;
+  padding: var(--space-8) 0 var(--space-10);
+  overflow: hidden;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/wp12294904.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(6px) grayscale(1) contrast(1.05) brightness(0.9);
+  transform: scale(1.05);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.back {
+  margin-bottom: var(--space-6);
+}
+
+.backLink {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--color-crime);
+  transition: opacity var(--duration-fast) var(--ease-enter);
+}
+
+.backLink:hover {
+  opacity: 0.7;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-6);
+}
+
+.heroTop {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.flag {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.countryLabel {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.raceName {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  letter-spacing: 0.03em;
+  color: var(--color-text-primary);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.circuit {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: var(--space-8);
+}
+
+.statItem {
+  background: var(--color-surface);
+  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+}
+
+/* Description */
+.descriptionBlock {
+  max-width: 65ch;
+  margin-bottom: var(--space-8);
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.actionBtn,
+.actionBtnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-enter);
+}
+
+.actionBtn:hover,
+.actionBtnSecondary:hover {
+  border-color: var(--color-lime);
+  color: var(--color-lime);
+}
+
+.actionBtn.favorited,
+.actionBtn.watchedBtn {
+  border-color: var(--color-lime);
+  color: var(--color-lime);
+  background: rgba(198, 241, 53, 0.06);
+}
+
+@media (max-width: 640px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,55 @@
+/* ============================================================
+   PITLANE — Design System Tokens
+   Philosophy: Ma (間) — negative space as an active element
+   ============================================================ */
+
+:root {
+  /* === COLOR PALETTE === */
+  --color-void: #121409;
+  --color-background: #121409;
+  --color-surface: #111111;
+  --color-surface-bright: #383a2d;
+  --color-surface-container: #1e2115;
+  --color-surface-container-high: #282b1f;
+  --color-surface-container-highest: #333629;
+  --color-border: #444934;
+  --color-lime: #c6f135;
+  --color-crime: #1a3cff;
+  --color-text-primary: #e2e4d1;
+  --color-text-muted: #c5c9ae;
+  --color-text-secondary: #8e937b;
+  --color-text-inverse: #121409;
+
+  /* === TYPOGRAPHY === */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* === SPACING SCALE (base-8) === */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --space-9: 72px;
+  --space-10: 80px;
+
+  /* === MOTION TOKENS === */
+  --ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+  --duration-slow: 600ms;
+
+  /* === BORDER RADIUS === */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+
+  /* === SHADOWS === */
+  --shadow-card: none;
+  --shadow-card-hover: none;
+}

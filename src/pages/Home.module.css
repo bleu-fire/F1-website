@@ -1,0 +1,210 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/wp12294904.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(6px) grayscale(1) contrast(1.05) brightness(0.9);
+  transform: scale(1.05);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Diagonal grid background */
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, var(--color-border) 1px, transparent 1px),
+    linear-gradient(45deg, var(--color-border) 1px, transparent 1px);
+  background-size: 120px 120px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 14vw, 10rem);
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.heroSub {
+  font-family: var(--font-mono);
+  font-size: clamp(0.65rem, 1.5vw, 0.9rem);
+  letter-spacing: 0.25em;
+  color: var(--color-lime);
+  margin-bottom: var(--space-6);
+}
+
+.heroTimer {
+  margin-bottom: var(--space-6);
+}
+
+.heroMeta {
+  margin-top: var(--space-4);
+}
+
+.heroBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid var(--color-lime);
+  color: var(--color-lime);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-enter);
+}
+
+.heroBtn:hover {
+  background: var(--color-lime);
+  color: var(--color-text-inverse);
+}
+
+.heroBtnArrow {
+  font-family: var(--font-mono);
+  transition: transform var(--duration-fast) var(--ease-enter);
+}
+
+.heroBtn:hover .heroBtnArrow {
+  transform: translateX(4px);
+}
+
+/* Scroll indicator */
+.heroScroll {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.scrollLine {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--color-border), transparent);
+}
+
+.scrollLabel {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  color: var(--color-text-muted);
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ── FEATURED SECTION ── */
+.featured {
+  padding: var(--space-10) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.featuredHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-5);
+}
+
+.sectionTag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--color-lime);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+}
+
+.featuredCard {
+  max-width: 480px;
+}
+
+/* ── STATS ── */
+.stats {
+  padding: var(--space-10) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-6) var(--space-4);
+  background: var(--color-surface);
+  gap: var(--space-1);
+  transition: background var(--duration-fast) var(--ease-enter);
+}
+
+.statItem:hover {
+  background: var(--color-surface-container);
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  color: var(--color-lime);
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
