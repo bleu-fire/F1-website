@@ -1,17 +1,20 @@
 .card {
   position: relative;
-  background: var(--color-surface);
-  background-image: url('../../assets/images/wp12294904.webp');
+  background-color: rgba(17, 17, 17, 0.9);
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.9)),
+    url('../../assets/images/wp12294904.webp');
   background-size: cover;
   background-position: center;
-  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-blend-mode: normal;
   border: 1px solid var(--color-border);
   border-radius: 0;
   overflow: hidden;
   cursor: pointer;
   transition:
     border-color var(--duration-fast) var(--ease-enter),
-    background var(--duration-fast) var(--ease-enter);
+    background-color var(--duration-fast) var(--ease-enter);
   display: flex;
   flex-direction: column;
   box-shadow: none;
@@ -20,6 +23,11 @@
 .card:hover {
   border-color: var(--color-lime);
   background: rgba(198, 241, 53, 0.04);
+}
+
+.sprint:hover {
+  border-color: var(--color-crime);
+  background: rgba(26, 60, 255, 0.08);
 }
 
 .card:focus-visible {
@@ -35,7 +43,15 @@
 .sprint .accentBar {
   background: var(--color-crime) !important;
 }
+.sprint .round {
+  color: var(--color-crime);
+}
 
+.sprint .actionBtn:hover,
+.sprint .actionBtn.favorited,
+.sprint .actionBtn.watched {
+  color: var(--color-crime);
+}
 /* Accent bar top */
 .accentBar {
   height: 4px;

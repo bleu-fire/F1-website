@@ -76,7 +76,7 @@ export default function MySeason() {
 
         {watchedRaces.length === 0 ? (
           <EmptyState
-            icon="📺"
+            icon="..."
             title="Your Season Log Is Empty"
             subtitle={
               watched.length > 0
